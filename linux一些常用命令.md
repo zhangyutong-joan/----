@@ -13,6 +13,6 @@ conda uninstall xxxx   #卸载xxxx文件包
 ```
 - 使用python36或者zytjoan环境
 
-- 开启jupyter直接在终端输入```jupyter notebook```然后复制http://localhost:8888/ 到浏览器就可以了。
+- 开启jupyter直接在终端输入```jupyter notebook --allow-root```然后复制terminal下的“Jupyter Notebook 6.3.0 is running at:”下面的链接到浏览器就可以了。
 
 查看gpu是否空闲：```nvidia-smi```
