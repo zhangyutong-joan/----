@@ -16,3 +16,7 @@ conda uninstall xxxx   #卸载xxxx文件包
 - 开启jupyter直接在终端输入```jupyter notebook --allow-root```然后复制terminal下的“Jupyter Notebook 6.3.0 is running at:”下面的链接到浏览器就可以了。
 
 查看gpu是否空闲：```nvidia-smi```
+
+将服务器端的文件或文件夹下载到本地:
+- 下载文件：```scp root@【服务器的IP地址】:/home/zyt/.../【原文件名】 【本地路径】/【目标文件名】```
+- 下载文件夹：```scp -r root@【服务器的IP地址】:/home/zyt/... 【本地路径】```
