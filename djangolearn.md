@@ -1,4 +1,5 @@
-shell里面创建一个django项目
+## Shell里面一些命令
+创建一个django项目
 ```
 django-admin startproject projectname
 ```
@@ -6,6 +7,9 @@ django-admin startproject projectname
 ```
 python manage.py startapp app
 ```
+运行：
+```python manage.py runserver # 启动```
+
 其他
 ```
 python manage.py createsuperuser # 创建admin用户
@@ -16,20 +20,20 @@ python manage.py makemigrations your_app_name
 
 python manage.py migrate #迁移到数据库
 
-python manage.py runserver # 启动
 ```
 
+## 1. model部分
+改变模型需要这三步：
+1. 编辑 models.py 文件，改变模型。
+2. 运行 python manage.py makemigrations 为模型的改变生成迁移文件。
+3. 运行 python manage.py migrate 来应用数据库迁移。
 
+## 2. view部分
 Django模板语法：
 ```
 view（py文件）：｛"HTML变量名" : "views变量名"｝
 HTML：｛｛变量名｝｝
 ```
-
-改变模型需要这三步：
-1. 编辑 models.py 文件，改变模型。
-2. 运行 python manage.py makemigrations 为模型的改变生成迁移文件。
-3. 运行 python manage.py migrate 来应用数据库迁移。
 
 render(): 载入模板，填充上下文，再返回由它生成的 HttpResponse 对象
 get_object_or_404(): 尝试用 get() 函数获取一个对象，如果不存在就抛出 Http404 错误
